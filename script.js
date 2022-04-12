@@ -1,20 +1,22 @@
-let box = document.getElementById("box");
+let box = document.getElementById('box');
 
 document.onmousemove = (event) => {
     var x = event.clientX;
     var y = event.clientY;
     box.style.left = x - (box.clientWidth/2) + "px";
     box.style.top = y - (box.clientWidth/2) + "px";
+    }
+function random(number){
+    return Math.floor(Math.random() * number)
 }
-const btn = document.getElementById('box');
-
-let index = 0;
-
-const colors = ['black', 'white', 'red', 'blue'];
-
-box.addEventListener('click', function onClick() {
-  box.style.backgroundColor = colors[index];
-  box.style.color = 'white';
-
-  index = index >= colors.length - 1 ? 0 : index + 1;
-});
+document.onclick = function () {
+berubah= "rgb("+random(255)+", "+random(255)+", "+random(255)+")";
+box.style.backgroundColor = berubah;
+}
+function random(number){
+    return Math.floor(Math.random() * number)
+}
+document.onclick = function () {
+berubah= "rgb("+random(255)+", "+random(255)+", "+random(255)+")";
+box.style.backgroundColor = berubah;
+}
